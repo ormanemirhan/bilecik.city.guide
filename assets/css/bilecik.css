@@ -1,0 +1,67 @@
+@import url(default.css);
+
+.bilecik-container{
+    width: 90%;
+    height: 150vh;
+    background-color: #f8f9fa;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 25px; 
+    margin: auto;
+    margin-top: 10px;
+    background-image: url('../img/map/map.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+.btn {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 30px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    text-align: center;
+    padding-top: 0.6vh;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn1{ top: 38%;  left: 37%;}
+.btn2{ top: 60%;  left: 57%;}
+.btn3{ top: 70%;  left: 73%;}
+.btn4{ top: 70%;  left: 33%;}
+.btn5{ top: 97%;  left: 50%;}
+.btn6{ top: 98%;  left: 26%;}
+.btn7{ top: 125%; left: 30%;}
+.btn8{ top: 89%;  left: 65%;}
+
+@media (max-width: 1200px) {
+.btn1{ top: 50%;  left: 35%;}
+.btn2{ top: 67%;  left: 57%;}
+.btn3{ top: 74%;  left: 75%;}
+.btn4{ top: 75%;  left: 30%;}
+.btn5{ top: 95%; left: 50%;}
+.btn6{ top: 97%; left: 23%;}
+.btn7{ top: 120%; left: 27%;}
+.btn8{ top: 89%;  left: 68%;}
+}
+
+@media (max-width: 768px) {
+.btn1{ top: 66%;  left: 30%;}
+.btn2{ top: 83%;  left: 60%;}
+.btn3{ top: 90%;  left: 84%;}
+.btn4{ top: 92%;  left: 25%;}
+.btn5{ top: 112%; left: 50%;}
+.btn6{ top: 115%; left: 15%;}
+.btn7{ top: 135%; left: 20%;}
+.btn8{ top: 105%; left: 75%;}
+}

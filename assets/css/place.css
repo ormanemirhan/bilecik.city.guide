@@ -1,0 +1,259 @@
+@import url(default.css);
+
+body {
+  scroll-behavior: smooth;
+}
+
+.navigation {
+    background-color: rgb(34, 136, 238);
+    border: 2px solid #fff;
+    width: 90%;
+    height: 5vh;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 10px;
+    display: flex; /* Flexbox düzeni */
+    justify-content: center; /* Yatayda ortalama */
+    align-items: center; /* Dikeyde ortalama */
+    gap: 50px; /* Öğeler arasına boşluk */
+    position: sticky;
+    z-index: 1000;
+    top: 10px;
+}
+
+.divider {
+    width: 1px;
+    height: 20px; /* Çizgi yüksekliği */
+    background-color: #ccc;
+}
+
+@media (max-width: 1000px) {
+    .navigation{
+        gap: 28px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .navigation{
+        gap: 4px;
+    }
+    .divider {
+    width: 1px;
+    height: 20px; /* Çizgi yüksekliği */
+    background-color: #ccc;
+}
+}
+   
+@media (max-width: 480px) {
+    .navigation{
+        gap: 15px;
+    }
+}
+
+.navigation a , a::after , a::before{
+      color: #fff;
+      text-decoration: none;
+}
+
+.navigation a:hover{
+    color: #ff0000;
+}
+
+section {
+  padding: 60px 20px;
+  min-height: 72vh;
+}
+
+section h2 {
+    color: #fff;
+    margin-top: -25px;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.museum-section{
+    padding: 60px 20px;
+    min-height: 44vh;
+}
+
+.church-section{
+    min-height: 43vh;
+}
+
+.church-cont{
+    width: 18.5%;
+    height: 5vh;
+    margin: 0 left;
+}
+
+#turbe , #cami , #muze , #church , #bina , #cesme{ 
+    background: #626262; 
+    width: 90%;
+    height: 5vh;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 25px;
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: space-between; 
+}
+
+.box-container-2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: space-between; 
+}
+    
+.box {
+    position: relative;
+    flex: 1 1 calc(20% - 20px);
+    height: 180px;
+    background: #ddd;
+    border-radius: 8px;
+    overflow: hidden; 
+}
+  
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    box-sizing: border-box;
+    transition: height 0.3s ease, background 0.3s ease;
+    text-align: center;
+}
+  
+.overlay .short, .overlay .full {
+    color: #fff;
+    transition: opacity 0.3s ease;
+    display: none; 
+}
+   
+.overlay .short {
+    display: block;
+}
+   
+.box:hover .overlay {
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+   
+.box:hover .overlay .short {
+    display: none;
+}
+    
+.box:hover .overlay .full {
+    display: block; 
+}
+   
+.overlay .full a {
+    color: #1e90ff;
+    text-decoration: underline; 
+}
+ 
+@media (max-width: 768px) {
+    .box { 
+        flex: 1 1 calc(50% - 20px);
+    }
+    section {
+        padding: 60px 20px;
+        min-height: 151.5vh;
+    }
+    .museum-section{
+        padding: 60px 20px;
+        min-height: 70vh;
+    }
+    .church-cont{
+        width: 48%;
+    }
+}
+   
+@media (max-width: 480px) {
+    .box { flex: 1 1 100%; }
+}
+
+/* General Settings */
+
+.box { background-repeat: no-repeat; background-size: cover; background-position: center; }
+
+/* Museum Photos */
+
+.museum0{ background-image: url('../img/museum/bilecik-museum.jpeg'); }
+
+.museum1{ background-image: url('../img/museum/bilecik-museum-2.jpg'); }
+
+.museum2{ background-image: url('../img/museum/sogut-museum.jpeg'); }
+
+.museum3{ background-image: url('../img/museum/bozuyuk-museum.webp'); }
+
+
+/* Tomb Photos */
+
+.tomb0{ background-image: url('../img/turbe/ertugrul-gazi-turbesi.jpg'); }
+
+.tomb1{ background-image: url('../img/turbe/seyh-edebali-turbesi.webp'); }
+
+.tomb2{ background-image: url('../img/turbe/dursun-fakih.jpg'); }
+
+.tomb3{ background-image: url('../img/turbe/kumral-abdal.jpg'); }
+
+.tomb4{ background-image: url('../img/turbe/malhun-hatun.jpeg'); }
+
+.tomb5{ background-image: url('../img/turbe/halime-hatun.webp'); }
+
+.tomb6{ background-image: url('../img/turbe/Kamuran-Gazi-Türbesi.jpg'); }
+
+.tomb7{ background-image: url('../img/turbe/Has-Mehmet-Bey-Turbesi.jpg'); }
+
+.tomb8{ background-image: url('../img/turbe/Mehmet-Nuri-Efendi-Türbesi.jpg'); }
+
+.tomb9{ background-image: url('../img/turbe/Rabia-Bala-Hatun-Turbesi.JPG'); }
+
+/* Mosque Photos */
+
+.mosque0{ background-image: url('../img/mosque/orhangazi.jpg'); }
+
+.mosque1{ background-image: url('../img/mosque/Golpazari-Mihalgazi-Cami.jpg'); }
+
+.mosque2{ background-image: url('../img/mosque/Osmaneli-Rustempasa-Cami.jpg'); }
+
+.mosque3{ background-image: url('../img/mosque/Koprulu-Mehmet-Pasa-Cami.jpg'); }
+
+.mosque4{ background-image: url('../img/mosque/kasimpasa-cami.jpg'); }
+
+.mosque5{ background-image: url('../img/mosque/celebi-mehmet-camii.jpg'); }
+
+.mosque6{ background-image: url('../img/mosque/kuyulu-mescid.jpg'); }
+
+.mosque7{ background-image: url('../img/mosque/kayi-boyu-camii.jpeg'); }
+
+.mosque8{ background-image: url('../img/mosque/ertugrul-gazi-camii.jpeg'); }
+
+.mosque9{ background-image: url('../img/mosque/serifpasa-camii.jpeg'); }
+
+/* Church Photos */
+
+.church0{ background-image: url('../img/church/hagios-georgios-rum-churchs.jpeg'); }
+
+/* Historic Builds */
+
+.build0{ background-image: url('../img/historic-builds/bilecik-hamam.webp'); }
+
+.build1{ background-image: url('../img/historic-builds/food-house-bilecik.jpeg'); }
+
+.build2{ background-image: url('../img/castle/5fc7e9c555427f1864abe68b.webp'); }

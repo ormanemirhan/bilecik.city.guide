@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/ıyı.ico">
+    <title>Ana Sayfa | Bilecik Kent Rehberi</title>
+</head>
+<body>
+
+<!-- Scrool Text Animation -->
+
+    <div class="scrool">
+        <marquee data-key="marquee" id="marquee" class="scrool1">Emirhan ORMAN tarafından Final Ödevi olarak tasarlanmıştır .</marquee>
+    </div>
+    
+<!-- Navbar -->
+    
+    <nav class="nav">
+        <div class="logo">
+            <img src="assets/img/logo-kent.png" alt="logo">
+        </div>
+        <div class="pages">
+            <i class="ri-home-5-line"></i><a data-key="home" href="index.html">Ana Sayfa</a>
+            <i class="ri-building-2-line"></i><a data-key="city" href="assets/html/bilecik.html">Bilecik</a>
+            <i class="ri-restaurant-line"></i><a data-key="food" href="assets/html/food.html">Yöresel Lezzetler</a>
+            <i class="ri-map-2-line"></i><a data-key="place" href="assets/html/place.html">Gezilecek Yerler</a>
+            <i class="ri-flag-line"></i><a data-key="history" href="assets/html/history.html">Tarih</a>
+        </div>
+        <a href="assets/html/contact.html"><button class="contact-button pulse" data-key="contact_btn">Bize Ulaşın</button></a>
+    </nav>
+
+    <main>
+    <div class="image-slider">
+        <div class="slider-wrapper">
+            <div class="slider-track">
+                <!-- Slide 1 -->
+                <div class="slide active">
+                  <a href="http://www.bilecik.gov.tr/ertugrul-gazi-cami" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/img/mosque/kuyulu-mescid.jpg" 
+                         alt="Kuyulu Mescid">
+                    <div class="slide-caption" data-key="slide_one">Tarihi Yer : Kuyulu Mescid ( Ertuğrul Gazi Camii )</div>
+                  </a>
+                  </div>
+                
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <a href="https://www.yarin11.com/bilkart-satislari-basladi-satis-noktalari-belli-oldu" target="_blank" rel="noopener noreferrer">
+                      <img src="assets/img/app-img/bilkart.png" 
+                         alt="Bilkart">
+                    <div class="slide-caption" data-key="slide_two">Bilkart Satış Noktaları !</div>
+                    </a>
+                  </div>
+                
+                <!-- Slide 3 -->
+                <div class="slide">
+                    <a href="http://www.bilecik.gov.tr/hagios-georgios-aya-yorgi-rum-kilisesi" target="_blank" rel="noopener noreferrer">
+                      <img src="assets/img/church/hagios-georgios-rum-churchs.jpeg" 
+                         alt="Tarihi Kilise">
+                    <div class="slide-caption" data-key="slide_three">Yalnızlığa Terkedilen Tarihi Bina : Hagios Georgios Rum Kilisesi</div>
+                    </a>
+                  </div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="slider-sld">
+            <button class="sld-button prev-btn">
+                <svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>
+            </button>
+            <button class="sld-button next-btn">
+                <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+            </button>
+        </div>
+    </div>
+    </main>
+
+    <section>
+      <div class="img-p">
+
+        <div class="img-text">
+            <div class="img-text-one">
+                <div class="photo-one"></div>
+                <div class="text-one">
+                  <p class="p1" data-key="seyh_p1">"Ey oğul! İnsanı yaşat ki, devlet yaşasın."</p>
+                  <p class="p2" data-key="seyh_p2">- Şeyh Edebali</p>
+                </div>
+            </div>
+            <div class="img-text-two">
+                <div class="text-two">
+                  <p class="p1" data-key="ert_p1">"Bir mazlumun duası, bin zalimin kılıcından keskindir."</p>
+                  <p class="p2" data-key="ert_p2">- Ertuğrul Gazi</p>
+                </div>
+                <div class="photo-two"></div>
+            </div>
+            <div class="img-text-three">
+                <div class="photo-three"></div>
+                <div class="text-three">
+                  <p class="p1" data-key="osm_p1">"Halkını koru, adaletle davran; zulümden sakın ki devlet daim olsun."</p>
+                  <p class="p2" data-key="osm_p2">- Osman Gazi</p>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+    </section>
+
+    <section>
+      <div class="marquee-containers">
+        <div class="marquee-container" onmouseover="pauseAnimation()" onmouseout="resumeAnimation()">
+            <div class="marquee-track" id="track"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+
+      <div class="food-cont">
+
+    <div class="box-container">
+      <div class="box1">
+      <div class="box img1">
+        <div class="overlay">
+          <span class="short" data-key="ravioli">Nohutlu Mantı</span>
+          <span class="full" data-key="ravioli_p">Bilecik nohutlu mantısı, Bilecik ilimize özgü yöresel bir lezzettir ... <a href="https://manisa.ktb.gov.tr/TR-152209/nohutlu-manti.html" target="_blank">DevamınıOku</a></span>
+        </div>
+      </div>
+      <div class="box img2">
+        <div class="overlay">
+          <span class="short" data-key="kebab">Bıldırcın Kebabı</span>
+          <span class="full" data-key="kebab_p">Bıldırcın Kebabı, Bilecik ilimize özgü yöresel bir lezzettir ... <a href="https://www.kulturportali.gov.tr/turkiye/bilecik/neyenir/bildircin-kebabi">DevamınıOku</a></span>
+        </div>
+      </div>
+      </div>
+      <div class="box2">
+      <div class="box img3">
+        <div class="overlay">
+          <span class="short" data-key="meat">Huris Tepsi</span>
+          <span class="full" data-key="meat_p">Huris Tepsi, Bilecik ilimize özgü yöresel bir lezzettir ... <a href="https://www.kulturportali.gov.tr/turkiye/bilecik/neyenir/huris-tepsi">DevamınıOku</a></span>
+        </div>
+      </div>
+      <div class="box img4">
+        <div class="overlay">
+          <span class="short" data-key="baklava">Büzme</span>
+          <span class="full" data-key="baklava_p">Cevizli Büzme Tatlısı, Bilecik ilimize özgü yöresel bir lezzettir ... <a href="https://www.kulturportali.gov.tr/turkiye/bilecik/neyenir/cevizli-buzme-tatlisi">DevamınıOku</a></span>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    </div>
+
+    </section>
+
+    <section class="month-now">
+      <div class="main-container">
+        <div class="header"><span data-key="now_city">Şehirde Bu Ay ></span></div>
+        <div class="cards-wrapper" id="scrollContainer">
+          <div class="card card-one"></div>
+          <div class="card card-two"></div>
+          <div class="card card-three"></div>
+          <div class="card card-four"></div>
+          <div class="card card-five"></div>
+          <div class="card card-six"></div>
+          <div class="card card-seven"></div>
+          <div class="card card-eight"></div>
+          <div class="card card-nine"></div>
+          <div class="card card-ten"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="city-month">
+
+    <div class="container-app">
+        <div class="text-section">
+            <h2 data-key="container_h2">Bilecik Seninle Uygulaması</h2>
+            <p data-key="container_p">
+                Sevgili vatandaşlarımızın ve turistlerimizin ihtiyaç duyacağı tüm hizmetlere kolayca ulaşabileceği yeni nesil akıllı şehir rehberi uygulaması...
+            </p>
+          <div class="content-buttons">
+            <a href="#" class="content-store-btn" onclick="openContact(event)" >
+              <i aria-hidden="true" class="fa-brands fa-google-play text-base text-blue-800 transition-all"></i> <span data-key="pl_st"> Play Store</span></a>
+            <a href="#" class="content-store-btn" onclick="openContact(event)" >
+              <i aria-hidden="true" class="fa-brands fa-app-store text-base text-blue-800 transition-all"></i> <span data-key="ap_st"> App Store</span></a>
+          </div>
+        </div>
+        <div class="image-section"></div>
+    </div>
+
+      <div id="city-apps" class="city-month-apps">
+        <h2><a href="#city-apps" target="_blank" rel="noopener noreferrer" data-key="apps">Diğer Uygulamalar</a><i id="app-iconic" class="ri-arrow-right-s-line"></i></h2>
+    
+        <div class="app">
+        <div class="app-img one"></div>
+        <div class="app-content">
+          <span data-key="bilsen">Bilecik Seninle</span>
+          <div class="app-buttons">
+            <a href="#" class="app-store-btn" onclick="openContact(event)" >
+              <i aria-hidden="true" class="fa-brands fa-google-play text-base text-blue-800 transition-all"></i> </a>
+            <a href="#" class="app-store-btn" onclick="openContact(event)" >
+              <i aria-hidden="true" class="fa-brands fa-app-store text-base text-blue-800 transition-all"></i> </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-divider"></div>
+
+      <div class="app">
+        <div class="app-img two"></div>
+        <div class="app-content">
+          <span data-key="bilcard">Bilkart Mobil</span>
+          <div class="app-buttons">
+            <a href="#" class="app-store-btn" onclick="openContact(event)" >
+              <i aria-hidden="true" class="fa-brands fa-google-play text-base text-blue-800 transition-all"></i>            </a>
+            <a href="#" class="app-store-btn" onclick="openContact(event)" >
+              <i aria-hidden="true" class="fa-brands fa-app-store text-base text-blue-800 transition-all"></i>            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-divider"></div>
+
+      <div class="app">
+        <div class="app-img three"></div>
+        <div class="app-content">
+          <span data-key="bilcep">BilCep Trafik</span>
+          <div class="app-buttons">
+            <a href="#" class="app-store-btn" onclick="openContact(event)" >
+              <i aria-hidden="true" class="fa-brands fa-google-play text-base text-blue-800 transition-all"></i>            </a>
+            <a href="#" class="app-store-btn" onclick="openContact(event)" >
+              <i aria-hidden="true" class="fa-brands fa-app-store text-base text-blue-800 transition-all"></i>            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-divider"></div>
+
+      <div class="app">
+        <div class="app-img four"></div>
+        <div class="app-content">
+          <span data-key="bilnot">BilNot Mobil</span>
+          <div class="app-buttons">
+            <a href="#" class="app-store-btn" onclick="openContact(event)" >
+              <i aria-hidden="true" class="fa-brands fa-google-play text-base text-blue-800 transition-all"></i>            </a>
+            <a href="#" class="app-store-btn" onclick="openContact(event)" >
+              <i aria-hidden="true" class="fa-brands fa-app-store text-base text-blue-800 transition-all"></i>            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-section">
+        <a href="#" class="app-button" onclick="openContact(event)" data-key="all_apps">Tüm Uygulamaları Gör</a>
+      </div>
+      </div>
+
+    </section>
+
+    <section class="place-container">
+        <div class="place-cont">
+          <div class="place-c"></div>
+          <div class="text-section">
+            <h2 data-key="tursun">Dursun Fakih Türbesi</h2>
+            <p data-key="tursun_p">
+              Dursun Fakih (Tursun Fakih, Tursun Fakı), Osmanlı Beyliği'nin kurucusu Osman Bey'in devrinde yaşamış bir fakihtir.
+              Birçok kaynakta Osman Gazi adına ilk hutbeyi okuyan, Osmanlı Devleti'nin ilk kadısı, imam-hatibi unvanını taşıyan kişi olduğu bildirilir.
+            </p>
+          </div>
+        </div>
+    </section>
+
+    <footer class="modern-footer">
+        <div class="footer-deco deco-circle"></div>
+        
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Marka Bilgisi -->
+                <div class="footer-section">
+                    <h4 data-key="footerh4" >Bilecik Kent Rehberi</h4>
+                    <p data-key="footer_p" style="color: rgba(255,255,255,0.7); line-height: 1.7;">
+                        Kentimize gezmeye gelen vatandaşlarımızı ve turistlerimizi mağdur etmemek için çalışıyoruz . Hep beraber el ele .
+                    </p>
+                    <div class="sociall-wrapper">
+
+                        <div class="sociall-icon ins_sc">
+                            <a href="https://www.instagram.com/emirhean._" target="_blank" rel="noopener noreferrer">
+                            <i id="iconic" class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+
+                        <div class="sociall-icon fc_sc">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                            <i id="iconic" class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </div>
+
+                        <div class="sociall-icon x_sc">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                            <i id="iconic" class="fa-brands fa-x-twitter"></i>
+                            </a>
+                        </div>
+
+                        <div class="sociall-icon gh_sc">
+                            <a href="assets/html/github.html" target="_blank" rel="noopener noreferrer">
+                            <i id="iconic" class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Linkler -->
+
+                <div class="footer-section">
+                    <h4 data-key="footer_sch4" >Keşfet</h4>
+                    <ul class="footer-links">
+                        <li><i class="ri-home-5-line"></i> <a href="index.html" data-key="footer_c1" >Ana Sayfa</a></li>
+                        <li><i class="ri-building-2-line"></i> <a href="assets/html/bilecik.html" data-key="footer_c2" >Bilecik</a></li>
+                        <li><i class="ri-restaurant-line"></i> <a href="assets/html/food.html" data-key="footer_c3" >Yöresel Lezzetler</a></li>
+                        <li><i class="ri-map-2-line"></i> <a href="assets/html/place.html" data-key="footer_c4" >Turistik Yerler</a></li>
+                        <li><i class="ri-flag-line"></i> <a href="assets/html/history.html" data-key="footer_c5" >Tarih</a></li>
+                        <li><i class="fa-regular fa-envelope"></i> <a href="assets/html/contact.html" data-key="footer_c6" >İletişim</a></li>
+                    </ul>
+                </div>
+
+                <!-- İletişim -->
+                <div class="footer-section">
+                    <h4 data-key="footer_u" >🚌 Ulaşım</h4>
+                    <ul class="footer-links">
+                        <li><a href="../uploads/minibus_guzergahlari.pdf" target="_blank"><i class="ri-bus-2-line"></i><span data-key="footer_dl" > Dolmuş</span></a></li>
+                        <li><a href="https://ebilet.tcddtasimacilik.gov.tr/" target="_blank"><i class="ri-train-line"></i><span data-key="footer_tr" > Hızlı Tren</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Canlı Saat Konumu -->
+                <div id="clock"></div>
+
+            </div>
+
+            <!-- Bülten -->
+            <div class="newsletter-box">
+                <h4 style="margin-bottom: 20px;" data-key="footer_new" >Yeniliklerden Haberdar Ol</h4>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="E-Mail">
+                    <button type="submit" class="newsletter-button" data-key="footer_subs" onclick="subscribe(event)" >Abone Ol →</button>
+                </form>
+            </div>
+
+            <!-- Alt Bilgiler -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; <span id="currentYear"></span> <span data-key="footer_cr" >Bilecik Kent Rehberi . Tüm hakları saklıdır | Emirhan ORMAN</span>
+                </div>
+                <div class="legal-links">
+                    <a href="assets/html/privacy.html" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.6); margin-left: 25px;" data-key="footer_gz" >Gizlilik</a>
+                    <a href="assets/html/terms.html" style="color: rgba(255,255,255,0.6); margin-left: 25px;" data-key="footer_sa" target="_blank" rel="noopener noreferrer">Şartlar</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Tema Değiştirme Butonu -->
+    <button class="theme-toggle" id="themeToggle">🌞</button>
+    
+      <!-- Dil seçici -->
+  <div class="lang-switch">
+    <button id="current-lang">
+      <img src="https://flagcdn.com/20x15/tr.png" alt="TR" />
+      <p data-key="language">TR</p><p>▼</p>
+    </button>
+    <ul id="lang-menu">
+      <li data-lang="tr"><img src="https://flagcdn.com/20x15/tr.png" alt="TR" /> Türkçe</li>
+      <li data-lang="en"><img src="https://flagcdn.com/20x15/gb.png" alt="EN" /> English</li>
+      <li data-lang="de"><img src="https://flagcdn.com/20x15/de.png" alt="DE" /> Deutsch</li>
+      <li data-lang="ar"><img src="https://flagcdn.com/20x15/sa.png" alt="AR"> عربي</li>
+      <li data-lang="es"><img src="https://flagcdn.com/20x15/es.png" alt="ES"> Español</li>
+      <li data-lang="ru"><img src="https://flagcdn.com/20x15/ru.png" alt="RU"> Русский</li>
+      <li data-lang="jp"><img src="https://flagcdn.com/20x15/jp.png" alt="JP"> 日本語</li>
+      <li data-lang="fr"><img src="https://flagcdn.com/20x15/fr.png" alt="FR"> Français</li>
+      <li data-lang="pt"><img src="https://flagcdn.com/20x15/pt.png" alt="PT"> Português</li>
+      <li data-lang="kr"><img src="https://flagcdn.com/20x15/iq.png" alt="KR"> Kurdi</li>
+    </ul>
+  </div>
+
+
+    <!-- Script Codes -->
+
+    <script src="assets/js/alert.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/language.js"></script>
+    <script src="assets/js/key.js"></script>
+    <script src="assets/js/slider2.js"></script>
+    <script src="assets/js/alert.js"></script>
+    <script src="assets/js/slider.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script src="assets/js/clock.js"></script>
+    <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,897 @@
+@import url(default.css);
+
+        :root {
+            --slider-height: 500px;
+            --slider-radius: 16px;
+            --button-size: 50px;
+            --caption-font: 1.8rem;
+        }
+
+        .image-slider {
+            width: 90%;
+            margin: auto;
+            margin-top: 10px;
+            height: var(--slider-height);
+            position: relative;
+            border-radius: var(--slider-radius);
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .slider-wrapper {
+            height: 100%;
+            position: relative;
+        }
+
+        .slider-track {
+            display: flex;
+            height: 100%;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .slide {
+            min-width: 100%;
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Navigation Buttons */
+        .slider-sld {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .image-slider:hover .slider-sld {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .sld-button {
+            width: var(--button-size);
+            height: var(--button-size);
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            border: none;
+            cursor: pointer;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+            display: grid;
+            place-items: center;
+        }
+
+        .sld-button:hover {
+            background: rgba(255,255,255,0.2);
+            transform: scale(1.1);
+        }
+
+        .sld-button svg {
+            width: 60%;
+            height: 60%;
+            fill: white;
+        }
+
+        /* Image Caption */
+        .slide-caption {
+            position: absolute;
+            bottom: -50px;
+            left: 30px;
+            color: white;
+            font-size: 25px;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            opacity: 0;
+            transition: all 0.4s ease;
+            z-index: 2;
+        }
+
+        .image-slider:hover .slide.active .slide-caption {
+            opacity: 1;
+            bottom: 30px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            :root {
+                --slider-height: 400px;
+                --button-size: 40px;
+                --caption-font: 1.2rem;
+            }
+
+            .slide-caption {
+                left: 15px;
+                bottom: -30px;
+            }
+            
+            .image-slider:hover .slide.active .slide-caption {
+                bottom: 15px;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.img-p{
+    width: 90%;
+    max-height: 670px;
+    background-color: #fffbf3;
+    background-image: url('../img/cont-bg/bg-flower.svg');
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-text-one , .img-text-two , .img-text-three{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.photo-one , .photo-two , .photo-three , .text-one , .text-two , .text-three {
+    background-color: #fffbf3;
+    border-radius: 25px;
+    border-bottom: 1px solid #8d8d8d;
+    border-right: 1px solid #8d8d8d;
+    box-shadow: 7px 5px 5px #8d8d8d;
+}
+
+.photo-one , .photo-two , .photo-three {
+    width: 280px;
+    height: 27vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-one , .text-two , .text-three {
+    width: 1020px;
+    height: 27vh;
+    display: grid;
+    text-align: center;
+    align-items: center;
+}
+
+.text-one .p1 , .text-two .p1 , .text-three .p1 {
+    margin-top: 25px;
+    font-size: 33px;
+        
+}
+
+.text-one .p2 , .text-two .p2 , .text-three .p2 {
+    margin-top: -55px;
+    font-size: 30px;
+    text-align: right;
+    margin-right: 40px;
+} 
+
+.photo-one {
+    margin-top: 35px;
+    margin-left: 35px;
+    background-image: url('../img/personal/edebali.png');
+}
+
+.text-one { margin-top: 35px; }
+
+.photo-two{ background-image: url('../img/personal/ertugrul-gazi.jpeg'); }
+
+.text-two { margin-left: 35px; }
+
+.photo-three {
+    margin-left: 35px;
+    margin-bottom: 35px;
+    background-image: url('../img/personal/osman-gazi.jpeg');
+}
+
+@media (max-width: 900px) {
+    .photo-one {
+    width: 360px;
+    height: 27vh;
+    border-radius: 25px;
+    margin-left: 25px;
+}
+    .text-one {
+    width: 1090px;
+    height: 27vh;
+    margin-right: 25px;
+}
+
+.text-one .p1 , .text-two .p1 , .text-three .p1 {
+    font-size: 24px;
+}
+
+.text-one .p2 , .text-two .p2 , .text-three .p2 {
+    text-align: center;
+    font-size: 22px;
+    text-align: right;
+    margin-right: 30px;
+}
+
+    .photo-two{
+    margin-right: 25px;
+    width: 360px;
+    height: 27vh;
+    background-image: url('../img/personal/ertugrul-gazi.jpeg');
+}
+    .text-two {
+    width: 1000px;
+    height: 27vh;
+    margin-left: 25px;
+}
+    .photo-three {
+    width: 280px;
+    height: 27vh;
+    margin-left: 25px;
+    background-image: url('../img/personal/osman-gazi.jpeg');
+}
+    .text-three {
+    margin-right: 25px;
+    width: 1000px;
+    height: 27vh;
+}
+
+.marquee-containers{
+    width: 90%;
+    margin: auto;
+    border-radius: 25px;
+}
+
+}
+
+.marquee-containers {
+    overflow: hidden;
+    width: 90%;
+    background-color: #fffbf3;
+    background-image: url('../img/cont-bg/bg-flower.svg');
+    background-repeat: calc(no-repeat);
+    margin: auto;
+    position: relative;
+    margin-top: 10px;
+    border-radius: 25px;
+}
+
+:root {
+  --fade-start: #fffbf3;
+  --fade-end:   rgba(248, 249, 250, 0);
+}
+
+body.dark-mode {
+  --fade-start: #fffbf3;
+  --fade-end:   rgba(26, 26, 26, 0);
+}
+
+/* Body ve kod bloklarında geçişleri iptal et */
+body,
+pre, code {
+  background: var(--bg-color);
+  color: var(--text-color);
+  /* Geçiş süresi 0, yani anında değişim */
+  transition: none !important;
+}
+
+/* Marquee için overflow ve fade */
+.marquee-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.marquee-container::before,
+.marquee-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+   bottom: 0;
+  width: 50px;
+  z-index: 1;
+}
+
+.marquee-container::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    var(--fade-start),
+    var(--fade-end)
+  );
+}
+
+.marquee-container::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    var(--fade-start),
+    var(--fade-end)
+  );
+}
+
+.marquee-track {
+    margin-top: 30px;
+    display: flex;
+    width: calc(250px * 10 + 25px * 9); /* Yeni genişlik hesaplaması */
+    animation: scroll 30s linear infinite; /* Animasyon süresi artırıldı */
+    position: relative;
+    z-index: 0;
+}
+
+.marquee-item {
+    flex: 0 0 250px; /* Resim genişliği */
+    margin-right: 25px; /* Resimler arası boşluk */
+    position: relative;
+    transition: transform 0.3s;
+    padding-bottom: 24px;
+}
+
+.marquee-item img {
+    width: 90%; /* Resimler genişliğe göre ölçeklenir */
+    display: block;
+    border-radius: 8px;
+    transition: opacity 0.3s;
+}
+
+.marquee-item .hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.marquee-item:hover .hover-img {
+    opacity: 1;
+}
+
+.marquee-item:hover img {
+    opacity: 0;
+}
+
+.marquee-item:hover {
+    transform: translateY(-15px);
+    z-index: 2;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-275px * 5)); } /* 250px resim genişliği + 25px boşluk */
+}
+
+.food-cont {
+    overflow: hidden;
+    width: 90%;
+    height: 480px;
+    background-color: #fffbf3;
+    background-image: url('../img/cont-bg/bg-flower.svg');
+    margin: auto;
+    position: relative;
+    margin-top: 10px;
+    border-radius: 25px;
+}
+
+.box-container {
+    flex-wrap: wrap;
+    gap: 55px;
+    margin-top: 25px;
+    justify-content: center;
+}
+    
+.box {
+    position: relative;
+    width: 30%; /* Yatay genişlik */
+    height: 200px; /* Yükseklik doğrudan belirtildi */
+    background: #ddd;
+    border-radius: 8px;
+    overflow: hidden; 
+}
+  
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35%; /* Overlay yüksekliği */
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    box-sizing: border-box;
+    transition: height 0.3s ease, background 0.3s ease;
+    text-align: center;
+}
+  
+.overlay .short, .overlay .full {
+    color: #fff;
+    transition: opacity 0.3s ease;
+    display: none; 
+}
+   
+.overlay .short {
+    display: block;
+}
+   
+.box:hover .overlay {
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+   
+.box:hover .overlay .short {
+    display: none;
+}
+    
+.box:hover .overlay .full {
+    display: block; 
+}
+   
+.overlay .full a {
+    color: #1e90ff;
+    text-decoration: underline; 
+}
+
+@media (max-width: 768px) {
+    .box {
+        width: 35%; /* Orta ekranlarda genişlik */
+        height: 180px; /* Orta ekranlarda yükseklik */
+    }
+}
+   
+@media (max-width: 480px) {
+    .box {
+        width: 100%; /* Küçük ekranlarda genişlik */
+        height: 160px; /* Küçük ekranlarda yükseklik */
+    }
+}
+
+.box1 , .box2 {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;    
+}
+
+.img1 , .img2 , .img3 , .img4 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img1{background-image: url('../img/food/bozmanti.jpg');}
+
+.img2{background-image: url('../img/food/bildircin.jpeg');}
+
+.img3{background-image: url('../img/food/huris-tepsi.jpg');}
+
+.img4{background-image: url('../img/food/buzme.png');}
+
+.month-now{
+    width: 90%;
+    height: 570px;
+    background-color: #fffbf3;
+    background-image: url('../img/cont-bg/bg-flower.svg');
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border-radius: 25px;
+}
+
+.main-container {
+  width: 96%;
+  height: 500px;
+  margin: 10px auto;
+  padding: 20px;
+}
+
+.header {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header span{
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    text-shadow:
+    1px 1px 2px #fff,
+    0 0 1em #fff,
+    0 0 0.2em #fff;
+}
+
+.cards-wrapper {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+}
+
+.card {
+    margin-top: 50px;
+    min-width: 200px;
+    height: 300px;
+    background: #f5f5f5;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    scroll-snap-align: start;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Scrollbar Gizleme */
+.cards-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.card-one{ background-image: url('../img/app-img/bilkart.png'); }
+.card-two{ background-image: url('../img/app-img/Bilecik-Seninle.png'); }
+.card-three{ background-image: url('../img/app-img/Bilecik-Seninle-2.png'); }
+.card-four{ background-image: url('../img/app-img/Bilecik-Seninle-3.png'); }
+.card-five{ background-image: url('../img/app-img/Bilecik-Seninle-4.png'); }
+.card-six{ background-image: url('../img/app-img/seninle-app.png'); }
+.card-seven{ background-image: url('../img/this-month/19-may.png'); }
+.card-eight{ background-image: url('../img/this-month/haluk-levent.jpg'); }
+.card-nine{ background-image: url('../img/this-month/tiyatro.png'); }
+
+/* Bilecik Seninle Application and Other Applications */
+
+.city-month{
+    background-image: url('../img/cont-bg/bg-flower.svg');
+    width: 90%;
+    height: 85vh;
+    background-color: #1e90ff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border-radius: 25px;
+    display: grid;
+}
+
+.city-month-apps{
+    background-color: #fff;
+    width: 350px;
+    height: 80vh;
+    border-radius: 25px;
+    position: absolute;
+    right: 110px;
+    margin-top: 18px;
+}
+
+.city-month-apps h2{
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.city-month-apps a{
+    text-decoration: none;
+    color: #000;
+}
+
+#app-iconic{
+    color: rgb(152, 2, 152);
+}
+
+/* Divider */
+
+.button-divider {
+    width: 270px;
+    height: 0.5px;
+    background-color: gray;
+    margin: 5px 40px;
+}
+
+/* Firstly App Settingsf */
+
+.app{
+    background-color: #fff;
+    width: 270px;
+    height: 80px;
+    margin-top: 20px;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px 0 0;
+}
+
+.one{ background-image: url('../img/app-img/Bilecik-Seninle.png'); }
+.two{ background-image: url('../img/app-img/bilkart.png'); }
+.three{ background-image: url('../img/app-img/BilCep-Trafik.png'); }
+.four{ background-image: url('../img/app-img/Bilecik-Seninle-2.png'); }
+
+.app-img{
+    background-color: #fff;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.app-content {
+    flex: 1;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.app-content span {
+    color: #000;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+/* Bilecik Seninle Content Button */
+
+
+.content-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+
+}
+
+.content-store-btn {
+    width: 150px;
+    height: 35px;
+    gap: 10px;
+    color: #000;
+    border: 1px solid #000;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border: none;
+    cursor: pointer;
+}
+
+.content-store-btn:hover {
+    opacity: 0.9;
+    background-color: #1e90ff;
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+}
+
+/* General App Settings */
+
+.app-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.app-store-btn {
+    width: 40px;
+    height: 30px;
+    border: 1px solid #000;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.app-store-btn:hover {
+    opacity: 0.9;
+    background-color: #c6c6c6;
+}
+
+.store-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.bottom-section {
+  position: absolute;
+  bottom: 20px; /* Alttan boşluk */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+
+.app-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #007bff;
+  color: white !important;
+  text-decoration: none;
+  border-radius: 25px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border: none;
+  cursor: pointer;
+}
+
+.app-button:hover {
+  background: #0056b3;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+}
+
+.container-app {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    height: 561.5px;
+    max-width: 66%;
+    margin: 18px 40px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.text-section {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.image-section {
+    flex: 1;
+    height: 500px;
+    background-image: url('../img/app-img/seninle-app.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+}
+
+.text-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.text-section p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+@media (max-width: 1200px) {
+    .image-section {
+        height: 300px;
+        margin-bottom: 20px;
+        background-image: none;
+    }
+    .container-app {
+        width: 46%;
+    }
+    .city-month-apps{
+        border-left: 1px solid #000;
+    }
+}
+
+@media (max-width: 1000px) {
+    .image-section {
+        height: 300px;
+        margin-bottom: 20px;
+        background-image: none;
+    }
+    .container-app {
+        width: 45%;
+    }
+    .city-month-apps{
+        border-left: 1px solid #000;
+        margin-right: -15px;
+    }
+}
+
+@media (max-width: 950px) {
+    .image-section {
+        height: 300px;
+        margin-bottom: 20px;
+        background-image: none;
+    }
+    .container-app {
+        width: 43%;
+    }
+    .city-month-apps{
+        border-left: 1px solid #000;
+    }
+}
+
+@media (max-width: 760px) {
+    .image-section {
+        height: 300px;
+        margin-bottom: 20px;
+        background-image: none;
+    }
+    .container-app {
+        width: 30%;
+    }
+    .city-month-apps{
+        border-left: 1px solid #000;
+    }
+}
+
+/* Home Page place-container */
+
+.place-container{
+    width: 90%;
+    height: 500px;
+    background-color: #1e90ff;
+    margin: auto;
+    border-radius: 25px;
+    margin-top: 10px;
+    display: grid;
+    background-image: url('../img/cont-bg/bg-flower.svg');
+}
+
+.place-cont{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    height: 430px;
+    max-width: 95%;
+    margin: 35px 40px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.place-c{
+    width: 35%;
+    height: 300px;
+    background-color: #0056b3;
+    border-radius: 25px;
+    margin-left: 4.8%;
+    box-shadow: 5px 5px 5px #8d8d8d;
+    background-image: url('../img/turbe/dursun-fakih-2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 700px) {
+    .place-container h2 {
+        font-size: 1.5em;
+    }
+    .place-container p {
+        font-size: 0.8em;
+    }
+}
