@@ -139,7 +139,7 @@
     width: 90%;
     max-height: 670px;
     background-color: #fffbf3;
-    background-image: url('../img/cont-bg/bg-flower.svg');
+    background-image: url('../img/cont-bg/bg-flower.png');
     border-radius: 25px;
     margin-left: auto;
     margin-right: auto;
@@ -265,7 +265,7 @@
     overflow: hidden;
     width: 90%;
     background-color: #fffbf3;
-    background-image: url('../img/cont-bg/bg-flower.svg');
+    background-image: url('../img/cont-bg/bg-flower.png');
     background-repeat: calc(no-repeat);
     margin: auto;
     position: relative;
@@ -384,7 +384,7 @@ pre, code {
     width: 90%;
     height: 480px;
     background-color: #fffbf3;
-    background-image: url('../img/cont-bg/bg-flower.svg');
+    background-image: url('../img/cont-bg/bg-flower.png');
     margin: auto;
     position: relative;
     margin-top: 10px;
@@ -490,7 +490,7 @@ pre, code {
     width: 90%;
     height: 570px;
     background-color: #fffbf3;
-    background-image: url('../img/cont-bg/bg-flower.svg');
+    background-image: url('../img/cont-bg/bg-flower.png');
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
@@ -566,7 +566,7 @@ pre, code {
 /* Bilecik Seninle Application and Other Applications */
 
 .city-month{
-    background-image: url('../img/cont-bg/bg-flower.svg');
+    background-image: url('../img/cont-bg/bg-flower.png');
     width: 90%;
     height: 85vh;
     background-color: #1e90ff;
@@ -858,7 +858,7 @@ pre, code {
     border-radius: 25px;
     margin-top: 10px;
     display: grid;
-    background-image: url('../img/cont-bg/bg-flower.svg');
+    background-image: url('../img/cont-bg/bg-flower.png');
 }
 
 .place-cont{
